@@ -1,94 +1,128 @@
 "use client";
 
-import React from "react";
+import React, { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { navLinks } from "@/sections";
 import { usePathname } from "next/navigation";
-// import { Button } from "@/components/ui/button";
 
 function Sidebar() {
-  const pathName = usePathname(); // current m kha hai
+  const pathName = usePathname();
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+  const dropdownRef = useRef(null);
+
+  const toggleDropdown = () => {
+    setIsDropdownOpen(!isDropdownOpen);
+  };
+
+  // for dropdown
+  
+  const handleClickOutside = (event) => {
+    if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
+      setIsDropdownOpen(false);
+    }
+  };
+
+  // for click outside of dropdown then automaticaly close
+
+  useEffect(() => {
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, []);
+
   return (
-    
-    <aside className="sidebar">
-      <div className="flex size-full flex-col gap-4">
+    <aside className="sidebar bg-gray-100 p-4 rounded-md shadow-lg w-64">
+      <div className="flex flex-col items-center gap-4">
         <Link href="/" className="sidebar-logo">
           <Image
             src="/images/logo.jpg"
             alt="Namelogo"
             width={100}
-            height={0}
-            className="rounded-full ml-16"
+            height={100}
+            className="rounded-full"
           />
         </Link>
 
-        <nav className="sidebar-nav">
-          {/* // agar koi sign in hai toh yhi dikhega verna nbai dikhe */}
+        <nav className="sidebar-nav w-full">
+          <ul className="sidebar-nav_elements flex flex-col gap-2 w-full">
+            {navLinks.map((item, index) => {
+              const isActive = item.route === pathName;
 
-          
-            <ul className="sidebar-nav_elements">
-              {navLinks.slice(0, 6).map((item) => {
-                const isActive = item.route === pathName;
-
+              if (item.label === "Team") {
                 return (
-                  <li
-                    key={item.route}
-                    className={`sidebar-nav_element group ${
-                      isActive ? "bg-white text-black" : "text-grey-700"
-                    }`}
-                  >
-                    <Link
-                      className="sidebar-link flex items-center"
-                      href={item.route}
+                  <li key={index} className="relative w-full" ref={dropdownRef}>
+                    <button
+                      onClick={toggleDropdown}
+                      className={`sidebar-nav_element group flex items-center justify-between w-full px-4 py-2 rounded-md ${
+                        isActive ? "bg-white text-black" : "text-white border "
+                      } hover:bg-white hover:text-black transition-all duration-300`}
                     >
-                      <Image
-                        src={item.icon}
-                        alt={item.route}
-                        width={28}
-                        height={28}
-                        className="bg-white"
-                      />
-
-                      {item.label}
-                    </Link>
+                      <div className="flex items-center gap-2">
+                        <Image
+                          src={item.icon}
+                          alt={item.route}
+                          width={24}
+                          height={24}
+                          className="bg-white"
+                        />
+                        {item.label}
+                      </div>
+                      <span>{isDropdownOpen ? "▲" : "▼"}</span>
+                    </button>
+                    {isDropdownOpen && (
+                      <ul className="absolute left-0 mt-2 w-full bg-white shadow-lg rounded-md">
+                        {item.subLinks.map((subItem, subIndex) => (
+                          <li
+                            key={subIndex}
+                            className="sidebar-nav_element group text-gray-700 transition-all duration-300"
+                          >
+                            <Link
+                              className="sidebar-link flex items-center p-2 pl-8"
+                              href={subItem.route}
+                              onClick={() => setIsDropdownOpen(false)}
+                            >
+                              <Image
+                                src={subItem.icon}
+                                alt={subItem.route}
+                                width={20}
+                                height={20}
+                              />
+                              {subItem.label}
+                            </Link>
+                          </li>
+                        ))}
+                      </ul>
+                    )}
                   </li>
                 );
-              })}
-            </ul>
+              }
 
-            <ul className="sidebar-nav_elements">
-              {navLinks.slice(6).map((item) => {
-                const isActive = item.route === pathName;
-
-                return (
-                  <li
-                    key={item.route}
-                    className={`sidebar-nav_element group ${
-                      isActive ? "bg-purple-700 text-white" : "text-grey-700"
-                    }`}
+              return (
+                <li
+                  key={index}
+                  className={`sidebar-nav_element group flex items-center w-full px-4 py-2 rounded-md ${
+                    isActive ? "bg-white text-black" : "text-white"
+                  } hover:bg-white hover:text-blacky transition-all duration-300`}
+                >
+                  <Link
+                    className="sidebar-link flex items-center gap-2 w-full"
+                    href={item.route}
                   >
-                    <Link
-                      className="sidebar-link flex items-center"
-                      href={item.route}
-                    >
-                      <Image
-                        src={item.icon}
-                        alt={item.route}
-                        width={28}
-                        height={28}
-                      />
-
-                      {item.label}
-                    </Link>
-                  </li>
-                );
-              })}
-              
-            </ul>
-          
-
-          
+                    <Image
+                      src={item.icon}
+                      alt={item.route}
+                      width={24}
+                      height={24}
+                      className="bg-white"
+                    />
+                    {item.label}
+                  </Link>
+                </li>
+              );
+            })}
+          </ul>
         </nav>
       </div>
     </aside>

@@ -1,0 +1,1 @@
+Added legacyBehavior prop to Link components to allow nesting <a> tags inside them.

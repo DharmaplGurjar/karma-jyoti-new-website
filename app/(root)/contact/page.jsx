@@ -52,13 +52,13 @@ function Page() {
             CHAT WITH US :
           </h1>
           <Link href="mailto:karmajyoti@iitism.ac.in" legacyBehavior>
-            <a className="text-2xl text-[#9b242d] font-bold cursor-pointer max-sm:text-xl flex items-center gap-4 max-sm:text-[17px] max-sm:whitespace-nowrap">
+            <a className="text-2xl text-[#9b242d] font-bold cursor-pointer max-sm:text-xl flex items-center gap-4 max-sm:text-[14px] max-sm:whitespace-nowrap">
               <Image src="/icons/whatsapp.png" width={50} height={30} />
               whatsapp group link
             </a>
           </Link>
           <Link href="https://t.me/karmajyoti_iitism" legacyBehavior>
-            <a className="text-2xl text-[#9b242d] font-bold cursor-pointer max-sm:text-xl flex items-center gap-4 max-sm:text-[18px] max-sm:whitespace-nowrap">
+            <a className="text-2xl text-[#9b242d] font-bold cursor-pointer max-sm:text-xl flex items-center gap-4 max-sm:text-[14px] max-sm:whitespace-nowrap">
               <Image src="/icons/telegram.png" width={50} height={30} />
               Telegram group link
             </a>

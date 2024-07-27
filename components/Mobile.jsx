@@ -53,7 +53,7 @@ function MobileNav() {
             />
           </SheetTrigger>
           <SheetContent className="sheet-content sm:w-64 bg-[#9b242d] border-none">
-            <ul className="header-nav_elements mt-8 space-y-8">
+            <ul className="header-nav_elements mt-8 space-y-12">
               {navLinks.map((item, index) => {
                 const isActive = item.route === pathName;
 

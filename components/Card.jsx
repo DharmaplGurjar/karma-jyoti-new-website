@@ -4,13 +4,13 @@ import Link from 'next/link';
 
 function Card({ item }) {
   return (
-    <div className="border rounded-lg overflow-hidden shadow-lg m-4 bg-white transform transition-transform hover:scale-105 lg:w-[400px] md:w-">
+    <div className="border rounded-lg overflow-hidden shadow-lg m-4 bg-white transform transition-transform hover:scale-105 lg:w-[350px]">
       <Link href={item.route} legacyBehavior>
         <a className="block">
           <Image
             src={item.image}
-            width={600}  // Set appropriate width
-            height={400} // Set appropriate height
+            width={400}  // Set appropriate width
+            height={200} // Set appropriate height
             alt={item.route}
             className="w-full h-auto object-cover"
           />

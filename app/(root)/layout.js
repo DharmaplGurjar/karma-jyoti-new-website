@@ -5,7 +5,8 @@ import React from 'react'
 
 function Layout({ children }) {
   return (
-    <main className="root">
+   
+    <main className="root overflow-scroll">
       <Sidebar />
 
       <div className="block lg:hidden">
@@ -14,12 +15,17 @@ function Layout({ children }) {
       </div>
 
       <div className="root-container">
+        
         <div className="wrapper">{children}</div>
-        {/* <div className="block lg:hidden mt-[200px] overflow-hidden">
-        <Footer/>
-      </div> */}
+       
       </div>
+
+      {/* <div className="block lg:hidden footer">
+     <Footer/>
+   </div> */}
     </main>
+   
+   
   )
 }
 

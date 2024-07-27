@@ -34,7 +34,7 @@
 
    /* Home Page */
    .home {
-    @apply  h-screen flex-col gap-4 rounded-[20px] border p-10  border-none;
+    @apply  h-full flex-col gap-4 rounded-[20px] border p-10  border-none;
   }
 
   .home-heading {
@@ -53,14 +53,17 @@
 
   
 .root {
-  @apply flex h-screen w-screen flex-col bg-[#ffffe0] lg:flex-row;
+  @apply flex h-screen w-screen flex-col bg-[#ffffe0] lg:flex-row overflow-hidden;
 }
 
- /* Navbar Component
+ /* Navbar Component */
+
  .header {
-  @apply fixed h-16 w-full border-b-4  p-5 lg:hidden;
+  @apply fixed h-24 w-full border-b-4 lg:hidden z-50 border-none outline-none;
 }
 
-.header-nav_elements {
-  @apply mt-8 flex w-full flex-col items-start gap-5 ;
-} */
+
+
+.footer{
+  @apply relative
+}

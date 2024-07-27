@@ -1,1 +1,4 @@
 Added legacyBehavior prop to Link components to allow nesting <a> tags inside them.
+
+
+all important fioles or json data like gallery,team members list is set in section/index.js please use from their.

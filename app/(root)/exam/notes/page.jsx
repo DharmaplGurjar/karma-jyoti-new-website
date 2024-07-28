@@ -4,7 +4,7 @@ import { Button } from "/components/ui/button";
 import { gallery } from "/sections";
 import Card from "/components/Card";
 import { useRouter } from "next/navigation";
-
+import Image from "next/image";
 
 function Page() {
   const router=useRouter();
@@ -18,23 +18,27 @@ function Page() {
         </div>
 
         <h1 className="text-center mt-8 text-3xl font-bold text-[#9b242d] sm:hidden max-sm:hidden lg:block md:block">
-          OUR PHOTO GALLERY - KARMAJYOTI
+          STUDENT-NOTES - KARMAJYOTI
         </h1>
 
-        <h1 className="hidden text-center mt-8 text-2xl font-bold text-[#9b242d] sm:block max-sm:block md:hidden">
-          OUR PHOTO GALLERY
+        <h1 className="hidden text-center mt-8 text-3xl font-bold text-[#9b242d] sm:block max-sm:block md:hidden">
+          NOTES-CORNER
         </h1>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-16 p-4 max-sm:w-[400px] max-sm:ml-[-60px]">
-          {gallery.map((item) => (
-            <Card key={item.route} item={item} />
-          ))}
+
+        <div className="bg-white shadow-lg rounded-lg p-8 max-w-3xl w-full text-center mt-16 max-sm:w-[350px] max-sm:ml-[-40px]">
+        <h1 className="text-4xl font-bold text-[#9b242d] mb-4 max-sm:text-3xl">Latest Notes</h1>
+        <p className="text-xl text-gray-700 mt-8">
+          There are currently no Notes available. Please check back later for the latest Notes and updates.
+        </p>
+        <div className="mt-12 flex items-center justify-center">
+         <Image src='/icons/pencil.png' width={100} height={50}/>
         </div>
-        
-      </section>
-     
-    </>
+      </div>
+
     
+      </section>
+    </>
   );
 }
 

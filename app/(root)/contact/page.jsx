@@ -1,6 +1,6 @@
 "use client"
 import React from "react";
-import { Button } from "@/components/ui/button";
+import { Button } from "/components/ui/button";
 import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
@@ -52,15 +52,15 @@ function Page() {
             CHAT WITH US :
           </h1>
           <Link href="mailto:karmajyoti@iitism.ac.in" legacyBehavior>
-            <a className="text-2xl text-[#9b242d] font-bold cursor-pointer max-sm:text-xl flex items-center gap-4 max-sm:text-[14px] max-sm:whitespace-nowrap">
-              <Image src="/icons/whatsapp.png" width={50} height={30} />
-              whatsapp group link
+            <a className="text-2xl text-[#9b242d] font-bold cursor-pointer max-sm:text-xl flex items-center gap-4 max-sm:text-[14px] max-sm:whitespace-nowrap overflow-hidden">
+              <Image src="/icons/whatsapp.png" width={40} height={30} />
+              whatsapp group
             </a>
           </Link>
           <Link href="https://t.me/karmajyoti_iitism" legacyBehavior>
-            <a className="text-2xl text-[#9b242d] font-bold cursor-pointer max-sm:text-xl flex items-center gap-4 max-sm:text-[14px] max-sm:whitespace-nowrap">
-              <Image src="/icons/telegram.png" width={50} height={30} />
-              Telegram group link
+            <a className="text-2xl text-[#9b242d] font-bold cursor-pointer max-sm:text-xl flex items-center gap-4 max-sm:text-[15px] max-sm:whitespace-nowrap">
+              <Image src="/icons/telegram.png" width={40} height={30} />
+              Telegram group 
             </a>
           </Link>
         </div>

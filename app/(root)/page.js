@@ -1,7 +1,8 @@
 "use client";
 import Image from "next/image";
 import React from "react";
-import { Button } from "@/components/ui/button";
+import { Button } from "/components/ui/button"
+
 import { useRouter } from "next/navigation";
 
 function Home() {
@@ -12,6 +13,7 @@ function Home() {
         <Button className="bg-[#9b242d] text-white rounded-full w-full h-[60px] text-3xl hover:bg-[#9b242d] p-8 mb-8">
           🤍 Donate Now!
         </Button>
+        
       </div>
 
       <div className="relative w-full  mt-8 max-sm:mb-[-50px]">
@@ -66,6 +68,7 @@ function Home() {
           </div>
         </div>
       </div>
+      
     </section>
   );
 }

@@ -2,27 +2,27 @@ export const navLinks = [
   {
     label: "Home",
     route: "/",
-    icon: "/icons/home (1).svg",
+    icon: "/icons/home.png",
   },
   {
     label: "Gallery",
     route: "/gallery",
-    icon: "/icons/gallery.png",
+    icon: "/icons/galery.png",
   },
   {
     label: "About",
     route: "/about",
-    icon: "/icons/information-button.png",
+    icon: "/icons/info.png",
   },
   {
     label: "Team",
     route: "/team",
-    icon: "/icons/group-chat.png",
+    icon: "/icons/team.png",
     subLinks: [
       {
         label: "Team",
         route: "/team",
-        icon: "/icons/group-chat.png",
+        icon: "/icons/team.png",
       },
       {
         label: "Alumni",
@@ -34,14 +34,27 @@ export const navLinks = [
   {
     label: "Contact",
     route: "/contact",
-    icon: "/icons/business-call.png",
+    icon: "/icons/contact.png",
   },
   {
-    label: "Examination",
+    label: "Student",
     route: "/exam",
-    icon: "/icons/checklist.png",
+    icon: "/icons/students.png",
+    subLinks: [
+      {
+        label: "Exams",
+        route: "/exam",
+        icon: "/icons/exam.png",
+      },
+      {
+        label: "Notes",
+        route: "/exam/notes",
+        icon: "/icons/pencil.png",
+      },
+    ],
   },
 ];
+
 
 export const gallery = [
   {
@@ -345,7 +358,7 @@ export const alumni=[
     linkdin: "/",
   },
   {
-    image: "/images/user.png",
+    image: "/images/alumni/prasanjit.png",
     name: "Prasanjit",
     fb: "/",
     insta: "/",

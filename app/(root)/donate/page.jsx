@@ -34,7 +34,7 @@ function page() {
         <h2 className="font-bold text-md text-center text-[#9b242d]">
         Thousands of candles can be lighted from a single candle, and the life of the candle will not be shortened. Happiness never decreases by being shared.
         </h2>
-        <h3 className=" relative left-28 text-lg text-[#9b242d]">~Buddha</h3>
+        <h3 className=" relative left-28 text-lg text-[#9b242d] max-sm:ml-[-80px]">~Buddha</h3>
         
       </div>
     </section>

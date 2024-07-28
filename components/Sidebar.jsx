@@ -3,27 +3,34 @@
 import React, { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { navLinks } from "@/sections";
+import { navLinks } from "/sections";
 import { usePathname } from "next/navigation";
 
 function Sidebar() {
   const pathName = usePathname();
-  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
-  const dropdownRef = useRef(null);
+  const [isDropdownOpen, setIsDropdownOpen] = useState({});
+  const dropdownRefs = useRef({});
 
-  const toggleDropdown = () => {
-    setIsDropdownOpen(!isDropdownOpen);
+  const toggleDropdown = (label) => {
+    setIsDropdownOpen((prevState) => ({
+      ...prevState,
+      [label]: !prevState[label],
+    }));
   };
 
-  // for dropdown
-  
   const handleClickOutside = (event) => {
-    if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
-      setIsDropdownOpen(false);
-    }
+    Object.keys(dropdownRefs.current).forEach((key) => {
+      if (
+        dropdownRefs.current[key] &&
+        !dropdownRefs.current[key].contains(event.target)
+      ) {
+        setIsDropdownOpen((prevState) => ({
+          ...prevState,
+          [key]: false,
+        }));
+      }
+    });
   };
-
-  // for click outside of dropdown then automaticaly close
 
   useEffect(() => {
     document.addEventListener("mousedown", handleClickOutside);
@@ -50,13 +57,17 @@ function Sidebar() {
             {navLinks.map((item, index) => {
               const isActive = item.route === pathName;
 
-              if (item.label === "Team") {
+              if (item.subLinks) {
                 return (
-                  <li key={index} className="relative w-full" ref={dropdownRef}>
+                  <li
+                    key={index}
+                    className="relative w-full"
+                    ref={(el) => (dropdownRefs.current[item.label] = el)}
+                  >
                     <button
-                      onClick={toggleDropdown}
+                      onClick={() => toggleDropdown(item.label)}
                       className={`sidebar-nav_element group flex items-center justify-between w-full px-4 py-2 rounded-md ${
-                        isActive ? "bg-white text-black" : "text-white border "
+                        isActive ? "bg-white text-black" : "text-white border"
                       } hover:bg-white hover:text-black transition-all duration-300`}
                     >
                       <div className="flex items-center gap-2">
@@ -65,13 +76,13 @@ function Sidebar() {
                           alt={item.route}
                           width={24}
                           height={24}
-                          className="bg-white"
+                          // className="bg-white"
                         />
                         {item.label}
                       </div>
-                      <span>{isDropdownOpen ? "▲" : "▼"}</span>
+                      <span>{isDropdownOpen[item.label] ? "▲" : "▼"}</span>
                     </button>
-                    {isDropdownOpen && (
+                    {isDropdownOpen[item.label] && (
                       <ul className="absolute left-0 mt-2 w-full bg-white shadow-lg rounded-md">
                         {item.subLinks.map((subItem, subIndex) => (
                           <li
@@ -81,7 +92,12 @@ function Sidebar() {
                             <Link
                               className="sidebar-link flex items-center p-2 pl-8"
                               href={subItem.route}
-                              onClick={() => setIsDropdownOpen(false)}
+                              onClick={() =>
+                                setIsDropdownOpen((prevState) => ({
+                                  ...prevState,
+                                  [item.label]: false,
+                                }))
+                              }
                             >
                               <Image
                                 src={subItem.icon}
@@ -102,9 +118,9 @@ function Sidebar() {
               return (
                 <li
                   key={index}
-                  className={`sidebar-nav_element group flex items-center w-full px-4 py-2 rounded-md ${
+                  className={`sidebar-nav_element  group flex items-center w-full px-4 py-0 rounded-md ${
                     isActive ? "bg-white text-black" : "text-white"
-                  } hover:bg-white hover:text-blacky transition-all duration-300`}
+                  } hover:bg-white hover:text-black transition-all duration-300`}
                 >
                   <Link
                     className="sidebar-link flex items-center gap-2 w-full"
@@ -115,7 +131,7 @@ function Sidebar() {
                       alt={item.route}
                       width={24}
                       height={24}
-                      className="bg-white"
+                      // className="bg-white"
                     />
                     {item.label}
                   </Link>

@@ -2,25 +2,36 @@
 
 import React, { useState, useRef, useEffect } from "react";
 import Link from "next/link";
-import { navLinks } from "@/sections";
-import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
+import { navLinks } from "/sections";
+import { Sheet, SheetContent, SheetTrigger } from "/components/ui/sheet";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
 
 function MobileNav() {
   const pathName = usePathname();
   const [isSheetOpen, setIsSheetOpen] = useState(false);
-  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
-  const dropdownRef = useRef(null);
+  const [dropdowns, setDropdowns] = useState({});
+  const dropdownRefs = useRef({});
 
-  const toggleDropdown = () => {
-    setIsDropdownOpen(!isDropdownOpen);
+  const toggleDropdown = (label) => {
+    setDropdowns((prevState) => ({
+      ...prevState,
+      [label]: !prevState[label],
+    }));
   };
 
   const handleClickOutside = (event) => {
-    if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
-      setIsDropdownOpen(false);
-    }
+    Object.keys(dropdownRefs.current).forEach((key) => {
+      if (
+        dropdownRefs.current[key] &&
+        !dropdownRefs.current[key].contains(event.target)
+      ) {
+        setDropdowns((prevState) => ({
+          ...prevState,
+          [key]: false,
+        }));
+      }
+    });
   };
 
   useEffect(() => {
@@ -53,17 +64,21 @@ function MobileNav() {
             />
           </SheetTrigger>
           <SheetContent className="sheet-content sm:w-64 bg-[#9b242d] border-none">
-            <ul className="header-nav_elements mt-8 space-y-12">
+            <ul className="header-nav_elements mt-16 space-y-12">
               {navLinks.map((item, index) => {
                 const isActive = item.route === pathName;
 
-                if (item.label === "Team") {
+                if (item.subLinks) {
                   return (
-                    <li key={index} className="relative w-full" ref={dropdownRef}>
+                    <li
+                      key={index}
+                      className="relative w-full"
+                      ref={(el) => (dropdownRefs.current[item.label] = el)}
+                    >
                       <button
-                        onClick={toggleDropdown}
+                        onClick={() => toggleDropdown(item.label)}
                         className={`header-nav_element group flex items-center justify-between w-full px-4 py-2 rounded-md ${
-                          isActive ? "bg-white text-black" : "text-white"
+                          isActive ? "bg-white text-black rounded-3xl" : "text-white"
                         } hover:bg-white hover:rounded-xl hover:text-black transition-all duration-300 border rounded-3xl `}
                       >
                         <div className="flex items-center gap-4">
@@ -75,10 +90,10 @@ function MobileNav() {
                           />
                           {item.label}
                         </div>
-                        <span>{isDropdownOpen ? "▲" : "▼"}</span>
+                        <span>{dropdowns[item.label] ? "▲" : "▼"}</span>
                       </button>
-                      {isDropdownOpen && (
-                        <ul className="mt-2 bg-white  shadow-lg rounded-xl ">
+                      {dropdowns[item.label] && (
+                        <ul className="mt-2 bg-white shadow-lg rounded-xl">
                           {item.subLinks.map((subItem, subIndex) => (
                             <li
                               key={subIndex}
@@ -88,7 +103,10 @@ function MobileNav() {
                                 className="header-link flex items-center p-2 pl-8 gap-4"
                                 href={subItem.route}
                                 onClick={() => {
-                                  setIsDropdownOpen(false);
+                                  setDropdowns((prevState) => ({
+                                    ...prevState,
+                                    [item.label]: false,
+                                  }));
                                   setIsSheetOpen(false);
                                 }}
                               >

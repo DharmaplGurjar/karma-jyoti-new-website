@@ -68,12 +68,12 @@ function Footer() {
 
       <div className="py-8 ml-8">
         <h2>
-          "Karma Jyoti is an NGO founded and managed by Students and Scholars of
-          Indian Institute of Technology (ISM), Dhanbad"
+          &quot;Karma Jyoti is an NGO founded and managed by Students and Scholars of
+          Indian Institute of Technology (ISM), Dhanbad&quot;
         </h2>
         <h2 className="py-6">
-          "We focus on spreading awareness, education and smile to the society
-          😊"
+          &quot;We focus on spreading awareness, education and smile to the society
+          😊&quot;
         </h2>
 
         <hr className="w-[400px] mt-4" />

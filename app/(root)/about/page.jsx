@@ -3,7 +3,7 @@ import React from "react";
 import { Button } from "/components/ui/button";
 import { useRouter } from "next/navigation";
 
-function page() {
+function Page() {
   const router=useRouter()
   return (
     <section className="home flex flex-col gap-4 rounded-[20px] border m-0 bg-[#ffffe0] min-h-screen mt-8 ">
@@ -113,4 +113,4 @@ function page() {
   );
 }
 
-export default page;
+export default Page;

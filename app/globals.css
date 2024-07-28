@@ -19,7 +19,7 @@
   }
 
   .sidebar-nav_elements {
-    @apply hidden w-full flex-col items-start gap-8 md:flex text-white mt-8;
+    @apply hidden w-full flex-col items-start gap-8 md:flex text-white mt-8 rounded-full;
   }
 
   .sidebar-nav_element {

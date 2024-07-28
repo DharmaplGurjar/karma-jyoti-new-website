@@ -113,12 +113,12 @@ export const gallery = [
 
 export const team = [
   {
-    image: "/images/user.png",
+    image: "/images/team/siddarth.jpeg",
     name: "Siddharth Kumar",
     position: "President",
     fb: "/",
-    insta: "/",
-    linkdin: "/",
+    insta: "https://www.instagram.com/somewhere_inspacetime/",
+    linkdin: "https://www.linkedin.com/in/siddharth-kumar-606053231/?originalSubdomain=in",
   },
   {
     image: "/images/user.png",

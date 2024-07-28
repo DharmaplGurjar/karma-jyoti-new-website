@@ -63,8 +63,8 @@ function MobileNav() {
               height={28}
             />
           </SheetTrigger>
-          <SheetContent className="sheet-content sm:w-64 bg-[#9b242d] border-none">
-            <ul className="header-nav_elements mt-16 space-y-12">
+          <SheetContent className="sheet-content sm:w-64 bg-[#9b242d] border-none ">
+            <ul className="header-nav_elements mt-16 space-y-12 ">
               {navLinks.map((item, index) => {
                 const isActive = item.route === pathName;
 
@@ -72,14 +72,14 @@ function MobileNav() {
                   return (
                     <li
                       key={index}
-                      className="relative w-full"
+                      className="relative w-full "
                       ref={(el) => (dropdownRefs.current[item.label] = el)}
                     >
                       <button
                         onClick={() => toggleDropdown(item.label)}
-                        className={`header-nav_element group flex items-center justify-between w-full px-4 py-2 rounded-md ${
+                        className={`header-nav_element group flex items-center justify-between w-full px-4 py-2 rounded-full ${
                           isActive ? "bg-white text-black rounded-3xl" : "text-white"
-                        } hover:bg-white hover:rounded-xl hover:text-black transition-all duration-300 border rounded-3xl `}
+                        } hover:bg-white hover:rounded-full hover:text-black transition-all duration-300 border rounded-3xl `}
                       >
                         <div className="flex items-center gap-4">
                           <Image
@@ -129,8 +129,8 @@ function MobileNav() {
                 return (
                   <li
                     key={index}
-                    className={`header-nav_element group flex items-center w-full px-4 py-2 rounded-md ${
-                      isActive ? "bg-white rounded-3xl text-black" : "text-white"
+                    className={`header-nav_element group flex items-center w-full px-4 py-2 rounded-full ${
+                      isActive ? "bg-white rounded-full text-black" : "text-white"
                     } hover:bg-white hover:rounded-3xl hover:text-black transition-all duration-300`}
                   >
                     <Link

@@ -125,12 +125,14 @@ function Layout({ children }) {
           <form className="space-y-4" onSubmit={handleSubmit}>
             <div>
               <label htmlFor="name" className="block text-sm font-medium text-gray-700">
-                Name
+                Name*
               </label>
               <input
                 type="text"
                 id="name"
                 name="name"
+                required
+                placeholder="Ex:- Amit"
                 className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
                 value={user.name}
                 onChange={(e) => setUser({ ...user, name: e.target.value })}
@@ -138,12 +140,14 @@ function Layout({ children }) {
             </div>
             <div>
               <label htmlFor="mobile" className="block text-sm font-medium text-gray-700">
-                Mobile Number
+                Mobile Number(optional
+                )
               </label>
               <input
                 type="tel"
                 id="mobile"
                 name="mobile"
+                placeholder="Ex:- 123456789"
                 className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
                 value={user.mobile}
                 onChange={(e) => setUser({ ...user, mobile: e.target.value })}
@@ -151,12 +155,14 @@ function Layout({ children }) {
             </div>
             <div>
               <label htmlFor="subject" className="block text-sm font-medium text-gray-700">
-                Subject
+                Subject*
               </label>
               <input
                 type="text"
                 id="subject"
                 name="subject"
+                required
+                placeholder="Ex:- For Notes"
                 className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
                 value={user.subject}
                 onChange={(e) => setUser({ ...user, subject: e.target.value })}
@@ -164,12 +170,14 @@ function Layout({ children }) {
             </div>
             <div>
               <label htmlFor="message" className="block text-sm font-medium text-gray-700">
-                Message
+                Message*
               </label>
               <textarea
                 id="message"
                 name="message"
                 rows="4"
+                required
+                placeholder="Ex:- Write Your Message "
                 className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
                 value={user.message}
                 onChange={(e) => setUser({ ...user, message: e.target.value })}

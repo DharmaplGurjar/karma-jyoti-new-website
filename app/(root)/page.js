@@ -2,7 +2,7 @@
 import Image from "next/image";
 import React from "react";
 import { Button } from "/components/ui/button"
-
+import Mail from "/components/Mail";
 import { useRouter } from "next/navigation";
 
 function Home() {
@@ -68,9 +68,9 @@ function Home() {
           </div>
         </div>
       </div>
-      
     </section>
   );
 }
 
 export default Home;
+

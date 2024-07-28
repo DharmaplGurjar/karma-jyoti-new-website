@@ -8,7 +8,7 @@ function Page() {
   return (
     <section className="home flex flex-col gap-4 rounded-[20px] border m-0 bg-[#ffffe0] min-h-screen mt-8 ">
       <div onClick={()=>router.push('/donate')}>
-        <Button className="bg-[#9b242d] text-white rounded-full w-full h-[60px] text-3xl hover:bg-[#9b242d] p-8 mb-8">
+        <Button className="bg-[#9b242d] text-white rounded-full w-full h-[60px] text-3xl hover:bg-[#9b242d] p-8 mb-8 max-[380px]:text-sm">
           🤍 Donate Now!
         </Button>
       </div>

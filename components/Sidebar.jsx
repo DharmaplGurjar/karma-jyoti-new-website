@@ -53,7 +53,7 @@ function Sidebar() {
         </Link>
 
         <nav className="sidebar-nav w-full">
-          <ul className="sidebar-nav_elements flex flex-col gap-2 w-full">
+          <ul className="sidebar-nav_elements flex flex-col gap-2 w-full ">
             {navLinks.map((item, index) => {
               const isActive = item.route === pathName;
 
@@ -70,7 +70,7 @@ function Sidebar() {
                         isActive ? "bg-white text-black" : "text-white border"
                       } hover:bg-white hover:text-black transition-all duration-300`}
                     >
-                      <div className="flex items-center gap-2">
+                      <div className="flex items-center gap-2 lg:ml-2">
                         <Image
                           src={item.icon}
                           alt={item.route}
@@ -87,10 +87,10 @@ function Sidebar() {
                         {item.subLinks.map((subItem, subIndex) => (
                           <li
                             key={subIndex}
-                            className="sidebar-nav_element group text-gray-700 transition-all duration-300"
+                            className="sidebar-nav_element group text-gray-700 transition-all duration-300 "
                           >
                             <Link
-                              className="sidebar-link flex items-center p-2 pl-8"
+                              className="sidebar-link flex items-center p-2 pl-8 "
                               href={subItem.route}
                               onClick={() =>
                                 setIsDropdownOpen((prevState) => ({
@@ -118,12 +118,12 @@ function Sidebar() {
               return (
                 <li
                   key={index}
-                  className={`sidebar-nav_element  group flex items-center w-full px-4 py-0 rounded-md ${
+                  className={`sidebar-nav_element   group flex items-center w-full px-4 py-0 rounded-md ${
                     isActive ? "bg-white text-black" : "text-white"
-                  } hover:bg-white hover:text-black transition-all duration-300`}
+                  } hover:bg-white hover:text-black transition-all duration-300 `}
                 >
                   <Link
-                    className="sidebar-link flex items-center gap-2 w-full"
+                    className="sidebar-link flex items-center gap-2 w-full "
                     href={item.route}
                   >
                     <Image

@@ -167,8 +167,9 @@ function Layout({ children }) {
                 name="message"
                 rows="4"
                 required
+
                 placeholder="Ex:- Write Your Message"
-                className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+                className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm resize-none"
                 value={user.message}
                 onChange={(e) => setUser({ ...user, message: e.target.value })}
               />

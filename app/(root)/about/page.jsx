@@ -95,7 +95,7 @@ function Page() {
           </h2>
         </div>
 
-        <div className=" border-[#9b242d] flex flex-col items-center p-4 mt-8 border-2 rounded-xl gap-3">
+        <div className=" border-[#9b242d] flex flex-col items-center p-4 mt-8 border-2 rounded-xl gap-4">
           <h1 className="text-2xl text-center font-bold">SAC IIT(ISM):</h1>
           <h2 className="text-center font-bold text-[#9b242d]">
           Class 11th, 12th And IIT-JEE

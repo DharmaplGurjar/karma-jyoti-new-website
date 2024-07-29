@@ -40,8 +40,8 @@ function Sidebar() {
   }, []);
 
   return (
-    <aside className="sidebar bg-gray-100 p-4 rounded-md shadow-lg w-64 xl:h-full">
-      <div className="flex flex-col items-center gap-4 max-lg:gap-0 max-xl:gap-0">
+    <aside className="sidebar bg-gray-100 p-2 rounded-md shadow-lg w-64">
+      <div className="flex flex-col items-center gap-0">
         <Link href="/" className="sidebar-logo">
           <Image
             src="/images/logo.jpg"
@@ -52,8 +52,8 @@ function Sidebar() {
           />
         </Link>
 
-        <nav className="sidebar-nav w-full max-lg:mt-[-10px] max-xl:mt-[-15px]">
-          <ul className="sidebar-nav_elements flex flex-col w-full">
+        <nav className="sidebar-nav w-full">
+          <ul className="sidebar-nav_elements flex flex-col gap-2 w-full ">
             {navLinks.map((item, index) => {
               const isActive = item.route === pathName;
 

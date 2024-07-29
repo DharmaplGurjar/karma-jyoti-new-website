@@ -10,11 +10,6 @@ export const navLinks = [
     icon: "/icons/galery.png",
   },
   {
-    label: "About",
-    route: "/about",
-    icon: "/icons/info.png",
-  },
-  {
     label: "Team",
     route: "/team",
     icon: "/icons/team.png",
@@ -32,10 +27,11 @@ export const navLinks = [
     ],
   },
   {
-    label: "Contact",
-    route: "/contact",
-    icon: "/icons/contact.png",
+    label: "About",
+    route: "/about",
+    icon: "/icons/info.png",
   },
+ 
   {
     label: "Student",
     route: "/exam",
@@ -53,6 +49,12 @@ export const navLinks = [
       },
     ],
   },
+  {
+    label: "Contact",
+    route: "/contact",
+    icon: "/icons/contact.png",
+  },
+ 
 ];
 
 

@@ -40,7 +40,7 @@ function Sidebar() {
   }, []);
 
   return (
-    <aside className="sidebar bg-gray-100 p-4 rounded-md shadow-lg w-64">
+    <aside className="sidebar bg-gray-100 p-4 rounded-md shadow-lg w-64 webkit-scrollbar: none;">
       <div className="flex flex-col items-center gap-4">
         <Link href="/" className="sidebar-logo">
           <Image
@@ -52,7 +52,7 @@ function Sidebar() {
           />
         </Link>
 
-        <nav className="sidebar-nav w-full">
+        <nav className="sidebar-nav w-full max-lg:mt-[-10px] max-xl:mt-[15px]">
           <ul className="sidebar-nav_elements flex flex-col gap-2 w-full ">
             {navLinks.map((item, index) => {
               const isActive = item.route === pathName;

@@ -10,6 +10,12 @@ function Home() {
   return (
     <section className="home h-screen flex flex-col gap-4 rounded-[20px] border m-0 bg-[#ffffe0]">
       <div onClick={()=>router.push('/donate')}>
+
+        
+      <marquee className="text-green-500 font-bold py-4 text-3xl" scrollamount="15">
+        Calling the selected students for JEE classes commencing from 3rd August from 9AM to 4PM at Student Activity Center Room 301
+      </marquee>
+
         <Button className="bg-[#9b242d] text-white rounded-full w-full h-[60px] text-3xl hover:bg-[#9b242d] p-8 mb-8 max-[380px]:text-xl">
           🤍 Donate Now!
         </Button>

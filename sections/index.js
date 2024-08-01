@@ -75,8 +75,8 @@ export const gallery = [
     image: "/images/gallery/e2.png",
     route: "https://www.instagram.com/p/Cxv2cEbSKiR/?img_index=1",
     date: "22nd September 2023",
-    location:
-      "Karmajyoti girls tied Rakhis to all the children at the orphanage, sharing the beautiful essence of this festival",
+    location: "Karmajyoti distributed sanitary pads and conducted enlightening talks on menstrual hygiene",
+      
   },
   {
     image: "/images/gallery/e3.png",
@@ -109,7 +109,8 @@ export const gallery = [
     route: "https://www.instagram.com/p/CwnZEJjJCD9/?img_index=1",
     date: "31st August 2023",
     location:
-      "Karmajyoti distributed sanitary pads and conducted enlightening talks on menstrual hygiene",
+    "Karmajyoti girls tied Rakhis to all the children at the orphanage, sharing the beautiful essence of this festival",
+     
   },
 ];
 

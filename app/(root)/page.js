@@ -1,12 +1,32 @@
 "use client";
 import Image from "next/image";
-import React from "react";
+import React, { useEffect } from "react";
 import { Button } from "/components/ui/button"
 import Mail from "/components/Mail";
 import { useRouter } from "next/navigation";
 
 function Home() {
   const router=useRouter();
+
+  useEffect(() => {
+    const trackVisit = async () => {
+      try {
+        await fetch("/api/track", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ page: "Home" }),
+        });
+      } catch (error) {
+        console.error("Tracking error:", error);
+      }
+    };
+
+
+    trackVisit();
+    
+  }, []);
+
+
   return (
     <section className="home h-screen flex flex-col gap-4 rounded-[20px] border m-0 bg-[#ffffe0]">
       <div onClick={()=>router.push('/donate')}>

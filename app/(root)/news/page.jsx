@@ -2,6 +2,7 @@ import Image from 'next/image';
 import React from 'react';
 
 function UpdatesPage() {
+  
   return (
     <section className="h-full flex flex-col items-center justify-center bg-[#ffffe0] mt-16 px-4">
       <div className="bg-white shadow-lg rounded-lg p-8 max-w-3xl w-full text-center">

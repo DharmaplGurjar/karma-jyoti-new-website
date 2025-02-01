@@ -1,10 +1,27 @@
 "use client";
-import React from "react";
+import React, { useEffect } from "react";
 import { Button } from "/components/ui/button";
 import { useRouter } from "next/navigation";
 
 function Page() {
   const router=useRouter()
+  useEffect(() => {
+      const trackVisit = async () => {
+        try {
+          await fetch("/api/track", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ page: "About" }),
+          });
+        } catch (error) {
+          console.error("Tracking error:", error);
+        }
+      };
+  
+  
+      trackVisit();
+      
+    }, []);
   return (
     <section className="home flex flex-col gap-4 rounded-[20px] border m-0 bg-[#ffffe0] min-h-screen mt-8 ">
       <div onClick={()=>router.push('/donate')}>

@@ -2,6 +2,7 @@ import Image from "next/image";
 import React from "react";
 
 function page() {
+  
   return (
     <section className="home flex flex-col gap-4 rounded-[20px] border m-0 bg-[#ffffe0] min-h-screen">
       <h1 className="text-center mt-8 text-3xl font-bold text-[#9b242d] sm:hidden max-sm:hidden lg:block md:block">

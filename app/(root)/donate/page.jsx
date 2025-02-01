@@ -1,25 +1,8 @@
-"use client";
 import Image from "next/image";
-import React, { useEffect } from "react";
+import React from "react";
 
 function page() {
-  useEffect(() => {
-      const trackVisit = async () => {
-        try {
-          await fetch("/api/track", {
-            method: "POST",
-            headers: { "Content-Type": "application/json" },
-            body: JSON.stringify({ page: "Donate" }),
-          });
-        } catch (error) {
-          console.error("Tracking error:", error);
-        }
-      };
   
-  
-      trackVisit();
-      
-    }, []);
   return (
     <section className="home flex flex-col gap-4 rounded-[20px] border m-0 bg-[#ffffe0] min-h-screen">
       <h1 className="text-center mt-8 text-3xl font-bold text-[#9b242d] sm:hidden max-sm:hidden lg:block md:block">

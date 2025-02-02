@@ -94,7 +94,7 @@ export async function POST(request) {
     // console.log(newData)
 
     return NextResponse.json(
-      { message: "Visitor logged", visitor: visitorData },
+      { message: "Visitor logged", visitor: newData },
       { status: 200 }
     );
   } catch (error) {

@@ -1,7 +1,8 @@
 "use client";
 
 import React, { useEffect, useState } from "react";
-import Visitor from "../../../utils/modal";
+import { completeData } from "../../../utils/data.action";
+
 
 function Page() {
   const [data, setData] = useState([]);
@@ -10,14 +11,14 @@ function Page() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch("/api/getVisitors");
+        const response = await completeData();
 
-        if (!response.ok) {
-          throw new Error(`HTTP error! Status: ${response.status}`);
-        }
+        // if (!response.ok) {
+        //   throw new Error(`HTTP error! Status: ${response.status}`);
+        // }
 
-        const visitors = await response.json();
-        // console.log(visitors);
+        const visitors =  response;
+       
 
         // Check if data is an array before updating state
         if (Array.isArray(visitors)) {

@@ -1,10 +1,8 @@
 import { NextResponse } from "next/server";
 import { UAParser } from "ua-parser-js";
 import connectDb from "../../../utils/db";
-import Visitor from "../../../utils/modal";
 import { createData } from "../../../utils/data.action";
 import fetch from "node-fetch";
-
 
 const IP2LOCATION_API_KEY = process.env.IP2LOCATION_API_KEY;
 
@@ -23,26 +21,17 @@ export async function POST(request) {
     const parser = new UAParser(userAgent);
     const parsedUserAgent = parser.getResult();
 
-    // ✅ Get public IP
-    const getPublicIP = async () => {
-      try {
-        const res = await fetch("https://api64.ipify.org?format=json");
-        const data = await res.json();
-        return data.ip || "Unknown";
-      } catch (error) {
-        console.error("Error fetching public IP:", error);
-        return "Unknown";
-      }
+    // ✅ Extract Client's Real IP
+    const getClientIP = () => {
+      const forwarded = request.headers.get("x-forwarded-for");
+      if (forwarded) return forwarded.split(",")[0]; // First IP in list
+      return request.headers.get("cf-connecting-ip") || "Unknown"; // Cloudflare fallback
     };
 
-    const ip = await getPublicIP();
-   
-
+    const ip = getClientIP();
+    
     // ✅ Detect Device Type
-    let deviceType = "Desktop"; // Default to Desktop
-    if (parsedUserAgent.device.type) {
-      deviceType = parsedUserAgent.device.type; // Mobile or Tablet
-    }
+    let deviceType = parsedUserAgent.device.type || "Desktop"; // Default to Desktop
 
     // ✅ Convert `accept-language` to human-readable format
     const rawLanguage = request.headers.get("accept-language") || "Unknown";
@@ -60,20 +49,23 @@ export async function POST(request) {
 
     const userLanguage = languageMap[formattedLanguage] || formattedLanguage;
 
-    // ✅ Location (Manually Set or Use IP Geolocation API)
-    
-
-
+    // ✅ Fetch Location Data using IP
     let locationData = { country: "Unknown", state: "Unknown", city: "Unknown" };
+
     if (ip !== "Unknown" && ip !== "::1") {
-      const response = await fetch(
-        `https://api.ip2location.io/?key=${IP2LOCATION_API_KEY}&ip=${ip}&format=json`
-      );
-      locationData = await response.json();
+      try {
+        const response = await fetch(
+          `https://api.ip2location.io/?key=${IP2LOCATION_API_KEY}&ip=${ip}&format=json`
+        );
+        locationData = await response.json();
+      } catch (error) {
+        console.error("Error fetching location:", error);
+      }
     }
 
+    console.log("Detected Location:", locationData);
+
     const location = locationData.region_name || "Fetching Location...";
-    
 
     // ✅ Store visitor data
     const visitorData = {
@@ -87,11 +79,8 @@ export async function POST(request) {
       location
     };
 
-    
-
     // ✅ Save to DB
     const newData = await createData(visitorData);
-    // console.log(newData)
 
     return NextResponse.json(
       { message: "Visitor logged", visitor: newData },

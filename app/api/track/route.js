@@ -91,6 +91,7 @@ export async function POST(request) {
 
     // ✅ Save to DB
     const newData = await createData(visitorData);
+    // console.log(newData)
 
     return NextResponse.json(
       { message: "Visitor logged", visitor: visitorData },

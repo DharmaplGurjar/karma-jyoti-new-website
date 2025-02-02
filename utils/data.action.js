@@ -24,7 +24,7 @@ export async function completeData() {
         await connectDb();
            
         
-        const allVisitors = await Visitor.find({});
+        const allVisitors = await Visitor.find({}).sort({ visitTime: -1 });
       
        
         return JSON.parse(JSON.stringify(allVisitors));

@@ -38,7 +38,7 @@ function Home() {
 
     {/* Content Block */}
     <div className="flex flex-col items-center text-center sm:text-left sm:items-start">
-      <h2 className="text-lg sm:text-2xl font-semibold text-blue-700">📢 JEE 2026 Batch (class 9th to 12th) </h2>
+      <h2 className="text-lg sm:text-2xl font-semibold text-blue-700">📢 JEE 2026 (Class 11 & 12) & JEE Foundation (Class 9 & 10) </h2>
 
       <p className="text-sm sm:text-base text-gray-700 mt-1">
         Classes for <strong>Class 9–12</strong> starting from <strong>June 1st week, 2025</strong>.<br />
@@ -50,7 +50,7 @@ function Home() {
       <img
         src="/images/jee-notification.png.jpg"
         alt="JEE 2026 Registration QR"
-        className="w-full max-w-md lg:max-w-full mt-3 rounded-md"
+        className="w-full max-w-xl lg:max-w-full mt-3 rounded-md"
       />
 
       <a

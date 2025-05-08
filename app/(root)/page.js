@@ -30,43 +30,41 @@ function Home() {
     <section className="home h-screen flex flex-col gap-4 rounded-[20px] border m-0 bg-[#ffffe0]">
       {/* Notification Banner - now properly scoped */}
       {showNotification && (
-        
-        <div className="bg-white p-4 rounded-lg shadow-md mb-4 relative">
-             <div className="absolute -top-3 -left-2 bg-red-600 text-white px-3 py-1 rounded-full shadow-lg text-sm font-bold">
+  <div className="bg-white p-4 rounded-lg shadow-md mb-4 relative max-w-auto ">
+    {/* NEW Badge */}
+    <div className="absolute -top-3 -left-2 bg-red-600 text-white px-3 py-1 rounded-full shadow-lg text-xs sm:text-sm font-bold">
       NEW
     </div>
-          <div className="flex justify-between items-start">
-            <div>
-              <h2 className="text-2xl font-semibold text-blue-700 text-center">📢 JEE 2026 Foundation</h2>
-              <p className="text-sm text-gray-700 mt-1 md:text-xl lg:text-xl">
-                Classes for <strong>Class 9–10</strong> starting from <strong>June 1st week, 2025</strong>.<br />
-                <span className="text-sm text-red-600 font-bold md:text-xl lg:text-xl">Deadline to register: 18th May 2025</span>
-              </p>
 
-              <p className="mt-2 text-sm text-gray-600 text-nowrap">📌 Scan the QR code or click the link below to register:</p>
+    {/* Content Block */}
+    <div className="flex flex-col items-center text-center sm:text-left sm:items-start">
+      <h2 className="text-lg sm:text-2xl font-semibold text-blue-700">📢 JEE 2026 Batch (class 9th to 12th) </h2>
 
-              <img
-                src="/images/jee-notification.png.jpg"
-                alt="JEE 2026 Registration QR"
-                width={400}
-                height={400}
-                className="w-full mt-2 rounded-md"
-              />
+      <p className="text-sm sm:text-base text-gray-700 mt-1">
+        Classes for <strong>Class 9–10</strong> starting from <strong>June 1st week, 2025</strong>.<br />
+        <span className="text-red-600 font-bold text-sm sm:text-base">Deadline to register: 18th May 2025</span>
+      </p>
 
-              <a
-                href="https://docs.google.com/forms/d/e/1FAIpQLScZKMFSGRinTlAfYd03bc-6wLaJPIxM0WuetFXY4X74j6-MpA/viewform"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-block mt-3 text-blue-600 hover:underline text-xl font-medium"
-              >
-                👉 Click here to Register
-              </a>
-            </div>
+      <p className="mt-2 text-sm text-gray-600">📌 Scan the QR code or click the link below to register:</p>
 
-          
-          </div>
-        </div>
-      )}
+      <img
+        src="/images/jee-notification.png.jpg"
+        alt="JEE 2026 Registration QR"
+        className="w-full max-w-md lg:max-w-full mt-3 rounded-md"
+      />
+
+      <a
+        href="https://docs.google.com/forms/d/e/1FAIpQLScZKMFSGRinTlAfYd03bc-6wLaJPIxM0WuetFXY4X74j6-MpA/viewform"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="inline-block mt-3 text-blue-600 hover:underline text-base sm:text-lg font-medium"
+      >
+        👉 Click here to Register
+      </a>
+    </div>
+  </div>
+)}
+
 
       {/* Donate Button - now with its own click handler */}
       <Button 

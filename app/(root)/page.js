@@ -30,54 +30,43 @@ function Home() {
     <section className="home h-screen flex flex-col gap-4 rounded-[20px] border m-0 bg-[#ffffe0]">
       {/* Notification Banner - now properly scoped */}
       {showNotification && (
-  <div className="bg-white p-4 rounded-lg shadow-md mb-4 relative border-l-4 border-red-500 mx-2 sm:mx-0">
-    {/* NEW tag - now responsive */}
-    <div className="absolute -top-3 -left-2 bg-red-600 text-white px-3 py-1 rounded-full shadow-lg text-xs sm:text-sm font-bold">
+        
+        <div className="bg-white p-4 rounded-lg shadow-md mb-4 relative">
+             <div className="absolute -top-3 -left-2 bg-red-600 text-white px-3 py-1 rounded-full shadow-lg text-sm font-bold">
       NEW
     </div>
-    
-    <div className="flex justify-between items-start">
-      <div className="w-full">
-        {/* Responsive text sizes */}
-        <h2 className="text-lg sm:text-xl md:text-2xl font-semibold text-blue-700 text-center">
-          📢 JEE 2026 Foundation
-        </h2>
-        
-        <p className="text-sm sm:text-md text-gray-700 mt-1">
-          Classes for <strong>Class 9–10</strong> starting from <strong>June 1st week, 2025</strong>.<br />
-          <span className="text-red-600 font-bold text-base sm:text-lg md:text-xl">
-            Deadline to register: 18th May 2025
-          </span>
-        </p>
+          <div className="flex justify-between items-start">
+            <div>
+              <h2 className="text-2xl font-semibold text-blue-700 text-center">📢 JEE 2026 Foundation</h2>
+              <p className="text-sm text-gray-700 mt-1 md:text-xl lg:text-xl">
+                Classes for <strong>Class 9–10</strong> starting from <strong>June 1st week, 2025</strong>.<br />
+                <span className="text-sm text-red-600 font-bold md:text-xl lg:text-xl">Deadline to register: 18th May 2025</span>
+              </p>
 
-        <p className="mt-2 text-xs sm:text-sm text-gray-600">
-          📌 Scan the QR code or click the link below to register:
-        </p>
+              <p className="mt-2 text-sm text-gray-600 text-nowrap">📌 Scan the QR code or click the link below to register:</p>
 
-        {/* Responsive image container */}
-        <div className="mt-2 max-w-xs sm:max-w-sm md:max-w-md mx-auto">
-          <img
-            src="/images/jee-notification.png.jpg"
-            alt="JEE 2026 Registration QR"
-            className="w-full rounded-md border border-gray-200"
-          />
+              <img
+                src="/images/jee-notification.png.jpg"
+                alt="JEE 2026 Registration QR"
+                width={400}
+                height={400}
+                className="w-full mt-2 rounded-md"
+              />
+
+              <a
+                href="https://docs.google.com/forms/d/e/1FAIpQLScZKMFSGRinTlAfYd03bc-6wLaJPIxM0WuetFXY4X74j6-MpA/viewform"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-block mt-3 text-blue-600 hover:underline text-xl font-medium"
+              >
+                👉 Click here to Register
+              </a>
+            </div>
+
+          
+          </div>
         </div>
-
-        {/* Responsive link */}
-        <div className="text-center mt-3">
-          <a
-            href="https://docs.google.com/forms/d/e/1FAIpQLScZKMFSGRinTlAfYd03bc-6wLaJPIxM0WuetFXY4X74j6-MpA/viewform"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-block text-blue-600 hover:underline text-sm sm:text-base md:text-lg font-medium"
-          >
-            👉 Click here to Register
-          </a>
-        </div>
-      </div>
-    </div>
-  </div>
-)}
+      )}
 
       {/* Donate Button - now with its own click handler */}
       <Button 

@@ -41,7 +41,7 @@ function Home() {
       <h2 className="text-lg sm:text-2xl font-semibold text-blue-700">📢 JEE 2026 Batch (class 9th to 12th) </h2>
 
       <p className="text-sm sm:text-base text-gray-700 mt-1">
-        Classes for <strong>Class 9–10</strong> starting from <strong>June 1st week, 2025</strong>.<br />
+        Classes for <strong>Class 9–12</strong> starting from <strong>June 1st week, 2025</strong>.<br />
         <span className="text-red-600 font-bold text-sm sm:text-base">Deadline to register: 18th May 2025</span>
       </p>
 

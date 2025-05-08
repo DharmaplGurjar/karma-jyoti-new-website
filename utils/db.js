@@ -7,8 +7,6 @@ const connectDb = async () => {
 
   if(!process.env.MONGO_URL) return console.log('MONGODB_URI is not defined');
 
-  console.log(process.env.MONGO_URL)
-
   if(isConnected) return console.log('=> using existing database connection');
 
   try {

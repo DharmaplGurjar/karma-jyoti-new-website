@@ -4,6 +4,7 @@ import { NextResponse } from 'next/server';
 
 export async function GET(req) {
   if (req.method !== "GET") {
+    console.log("no daa")
     return NextResponse.json({ message: "Method Not Allowed" }, { status: 405 });
   }
 
@@ -13,12 +14,15 @@ export async function GET(req) {
   
 
     // Fetch all visitors using Mongoose model
-    const visitors = await Visitor.find().sort({ visitTime: -1 }); // Use Mongoose's find() to get all documents
-
+    const visitors = await Visitor.find({}).sort({ visitTime: -1 }); // Use Mongoose's find() to get all documents
     
 
-    // Return the response using NextResponse
-    return NextResponse.json(visitors, { status: 200 });
+    const headers = {
+      "Cache-Control": "no-store, max-age=0",
+      "Pragma": "no-cache",
+    };
+
+    return NextResponse.json(visitors, { status: 200, headers });
   } catch (error) {
     console.error("Database fetch error:", error);
     return NextResponse.json({ message: "Internal Server Error", error: error.message }, { status: 500 });

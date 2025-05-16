@@ -20,7 +20,7 @@ function Home() {
     Download and print the admission form from the link below:
   </p>
   <a
-    href="https://docs.google.com/document/d/11Jf0Ref5J8X0pVGjQte6YDV1LBxPuKAg/export?format=pdf"
+    href="https://drive.google.com/uc?export=download&id=1KnibidsZiSh7z9-0-oj6SWpzPN9XPuxB"
     target="_blank"
     rel="noopener noreferrer"
     className="inline-block mt-2 text-blue-700 hover:underline font-medium text-base sm:text-lg"

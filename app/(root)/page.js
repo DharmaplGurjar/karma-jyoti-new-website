@@ -9,25 +9,26 @@ function Home() {
   const router = useRouter();
   const [showNotification, setShowNotification] = useState(true);
 
-  // useEffect(() => {
-  //   const trackVisit = async () => {
-  //     try {
-  //       await fetch("/api/track", {
-  //         method: "POST",
-  //         headers: { "Content-Type": "application/json" },
-  //         body: JSON.stringify({ page: "Home" }),
-  //       });
-  //     } catch (error) {
-  //       console.error("Tracking error:", error);
-  //     }
-  //   };
-
-  //   trackVisit();
-    
-  // }, []);
 
   return (
+    
     <section className="home h-screen flex flex-col gap-4 rounded-[20px] border m-0 bg-[#ffffe0]">
+      {/* Important Admission Form Notice */}
+<div className="bg-yellow-100 border border-yellow-400 text-yellow-800 px-4 py-3 rounded relative shadow-md mt-4 mx-4 sm:mx-8">
+  <strong className="font-bold block text-base sm:text-lg">📄 Please come with this form when you come for admission.</strong>
+  <p className="text-sm sm:text-base mt-1">
+    Download and print the admission form from the link below:
+  </p>
+  <a
+    href="https://docs.google.com/document/d/11Jf0Ref5J8X0pVGjQte6YDV1LBxPuKAg/export?format=pdf"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="inline-block mt-2 text-blue-700 hover:underline font-medium text-base sm:text-lg"
+  >
+    👉 Download Admission Form (PDF)
+  </a>
+</div>
+
       {/* Notification Banner - now properly scoped */}
       {showNotification && (
   <div className="bg-white p-4 rounded-lg shadow-md mb-4 relative max-w-auto ">

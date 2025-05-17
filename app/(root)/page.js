@@ -14,7 +14,7 @@ function Home() {
     
     <section className="home h-screen flex flex-col gap-4 rounded-[20px] border m-0 bg-[#ffffe0]">
       {/* Important Admission Form Notice */}
-<div className="bg-yellow-100 border border-yellow-400 text-yellow-800 px-4 py-3 rounded relative shadow-md mt-4 mx-4 sm:mx-8">
+<div className="bg-yellow-100 border border-yellow-400 text-yellow-800 px-6 py-3 rounded relative shadow-md mt-4 mx-4 sm:mx-8">
   <strong className="font-bold block text-base sm:text-lg">📄 Please come with this form when you come for admission.</strong>
   <p className="text-sm sm:text-base mt-1">
     Download and print the admission form from the link below:

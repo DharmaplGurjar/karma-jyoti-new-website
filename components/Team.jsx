@@ -49,7 +49,7 @@ function Team({ item }) {
         
         {/* Circular profile image */}
         <div className='flex justify-center mb-4'>
-          <div className="w-[190px] h-[265px] relative rounded-full overflow-hidden">
+          <div className="w-[180px] h-[215px] relative rounded-full overflow-hidden">
             <Image
               src={item.image}
               alt={item.name}

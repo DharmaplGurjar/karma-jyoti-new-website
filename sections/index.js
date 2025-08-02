@@ -132,6 +132,14 @@ export const team = [
     linkdin: "/",
   },
  
+  {
+    image: "/images/team/Soumyajit Ghosh.jpeg",
+    name: "Soumyajit Ghosh",
+    position: "Treasurer",
+    fb: "/",
+    insta: "/",
+    linkdin: "/",
+  },
 
   {
     image: "/images/team/Uttam Kumar.jpg",
@@ -221,7 +229,7 @@ export const team = [
   },
 
   {
-    image: "/images/team/Divya Kumari.jpg",
+    image: "/images/team/DivyaKumari.png",
     name: "Divya Kumari",
     position: "Chemistry Coordinator and Faculty",
     fb: "/",
@@ -248,7 +256,7 @@ export const team = [
   },
 
   {
-    image: "/images/team/Abhishek Singh.jpg",
+    image: "/images/team/AbhishekKumar.png",
     name: "Abhishek Singh",
     position: "JEE Maths Faculty ",
     fb: "/",

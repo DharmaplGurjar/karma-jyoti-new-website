@@ -124,7 +124,7 @@ export const team = [
     linkdin: "http://linkedin.com/in/soumyajit-ghosh-30a02323b",
   },
   {
-    image: "/images/user.png",
+    image: "/images/team/RamBabu.png",
     name: "Rambabu Gupta",
     position: "Secretary",
     fb: "/",
@@ -157,6 +157,16 @@ export const team = [
     insta: "https://www.instagram.com/dharmpalgurjar0008/",
     linkdin: "https://linkedin.com/in/dharmpal-gurjar-b2079b330",
   },
+
+  {
+    image: "/images/team/Nirup Sundar Mandal.jpg",
+    name: "NIRUP SUNDAR MANDAL ",
+    position: "Coordinator - JEE Foundation ",
+    fb: "https://www.facebook.com/share/16vyZX4H36/",
+    insta: "https://www.instagram.com/nirup.sundar?igsh=c3ltdnNoYmVzcm9k",
+    linkdin: "https://www.instagram.com/nirup.sundar?igsh=c3ltdnNoYmVzcm9k",
+  },
+
   {
     image: "/images/team/Ranjan Singh.jpg",
     name: "Ravi Ranjan Singh",
@@ -164,14 +174,6 @@ export const team = [
     fb: "https://www.facebook.com/profile.php?id=100007031202771",
     insta: "https://www.instagram.com/raviranjan.cpr123/",
     linkdin: "https://www.linkedin.com/in/ravi-ranjan-singh-8b4aa7216",
-  },
-  {
-    image: "karma-jyoti-new-website/public/images/team/Nirup Sundar Mandal.jpg",
-    name: "NIRUP SUNDAR MANDAL ",
-    position: "Coordinator - JEE Foundation ",
-    fb: "https://www.facebook.com/share/16vyZX4H36/",
-    insta: "https://www.instagram.com/nirup.sundar?igsh=c3ltdnNoYmVzcm9k",
-    linkdin: "https://www.instagram.com/nirup.sundar?igsh=c3ltdnNoYmVzcm9k",
   },
 
   {

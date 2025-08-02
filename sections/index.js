@@ -158,23 +158,29 @@ export const team = [
     linkdin: "https://linkedin.com/in/dharmpal-gurjar-b2079b330",
   },
 
+{
+
+},
+
+{
+  image: "/images/team/Ranjan Singh.jpg",
+  name: "Ravi Ranjan Singh",
+  position: "JEE-Foundation Teachers Head",
+  fb: "https://www.facebook.com/profile.php?id=100007031202771",
+  insta: "https://www.instagram.com/raviranjan.cpr123/",
+  linkdin: "https://www.linkedin.com/in/ravi-ranjan-singh-8b4aa7216",
+},
+
   {
     image: "/images/team/Nirup Sundar Mandal.jpg",
-    name: "NIRUP SUNDAR MANDAL ",
+    name: "Nirup Sundar Mandal ",
     position: "Coordinator - JEE Foundation ",
     fb: "https://www.facebook.com/share/16vyZX4H36/",
     insta: "https://www.instagram.com/nirup.sundar?igsh=c3ltdnNoYmVzcm9k",
     linkdin: "https://www.instagram.com/nirup.sundar?igsh=c3ltdnNoYmVzcm9k",
   },
 
-  {
-    image: "/images/team/Ranjan Singh.jpg",
-    name: "Ravi Ranjan Singh",
-    position: "JEE-Foundation Teachers Head",
-    fb: "https://www.facebook.com/profile.php?id=100007031202771",
-    insta: "https://www.instagram.com/raviranjan.cpr123/",
-    linkdin: "https://www.linkedin.com/in/ravi-ranjan-singh-8b4aa7216",
-  },
+
 
   {
     image: "/images/team/Arpana Divyansh.jpg",
@@ -199,6 +205,14 @@ export const team = [
     position: "Coordinator Social",
     fb: "/",
     insta: "https://www.instagram.com/rahul_toras/",
+    linkdin: "/",
+  },
+  {
+    image: "/images/team/RAHUL ranjan.jpg",
+    name: "Suruchi Kumari ",
+    position: "Coordinator Social",
+    fb: "/",
+    insta: "/",
     linkdin: "/",
   },
 
@@ -238,6 +252,16 @@ export const team = [
     insta: "https://www.instagram.com/maddheshiya1417?utm_source=qr&igsh=czhhNzNseno4N3Q2",
     linkdin: "https://www.linkedin.com/in/divya-maddheshiya-a9059b31b?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
   },
+
+  {
+    image: "/images/team/Arun Kumar.jpeg",
+    name: "ARUN KUMAR ",
+    position: "Mathematics Coordinator and Faculty",
+    fb: "/",
+    insta: "/",
+    linkdin: "http://linkedin.com/in/arun-kumar-491706356",
+  },
+
   {
     image: "/images/team/Bhuvnesh Suthar.jpg",
     name: "Bhuvnesh Suthar",
@@ -256,6 +280,8 @@ export const team = [
     insta: "/",
     linkdin: "https://www.linkedin.com/in/jitesh-hatwal-93aa2b319?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
   },
+  
+ 
 
   {
     image: "/images/team/AbhishekKumar.png",
@@ -264,16 +290,16 @@ export const team = [
     fb: "/",
     insta: "/",
     linkdin: "https://www.linkedin.com/in/abhishek-singh-844163315/",
-  },
+  }
   {
-    image: "/images/team/Arun Kumar.jpeg",
-    name: "ARUN KUMAR ",
-    position: "Mathematics Coordinator and Faculty",
+    image: "/images/team/Tanisha Shukla.jpg",
+    name: "Tanisha O. Shukla",
+    position: "JEE Physics Faculty",
     fb: "/",
     insta: "/",
-    linkdin: "http://linkedin.com/in/arun-kumar-491706356",
-  },
- 
+    linkdin: "https://www.linkedin.com/in/tanisha-shukla-9b59122",
+  }
+
 ];
 
 

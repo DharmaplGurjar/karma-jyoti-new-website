@@ -82,7 +82,7 @@ function Footer() {
       <div>
         <h2>
           © Copyright Karma Jyoti 2024
-          Designed with ❤️ by Dharmpal
+          Designed with ❤️ by Amit
         </h2>
       </div>
     </div>

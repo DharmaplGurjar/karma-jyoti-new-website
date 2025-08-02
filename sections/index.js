@@ -132,13 +132,9 @@ export const team = [
     linkdin: "/",
   },
  
+
   {
-    image: "/images/team/Soumyajit Ghosh.jpeg",
-    name: "Soumyajit Ghosh",
-    position: "Treasurer",
-    fb: "/",
-    insta: "/",
-    linkdin: "/",
+
   },
 
   {
@@ -158,9 +154,7 @@ export const team = [
     linkdin: "https://linkedin.com/in/dharmpal-gurjar-b2079b330",
   },
 
-{
 
-},
 
 {
   image: "/images/team/Ranjan Singh.jpg",
@@ -170,6 +164,13 @@ export const team = [
   insta: "https://www.instagram.com/raviranjan.cpr123/",
   linkdin: "https://www.linkedin.com/in/ravi-ranjan-singh-8b4aa7216",
 },
+
+
+{
+
+},
+
+
 
   {
     image: "/images/team/Nirup Sundar Mandal.jpg",
@@ -208,7 +209,7 @@ export const team = [
     linkdin: "/",
   },
   {
-    image: "/images/team/RAHUL ranjan.jpg",
+    image: "/images/team/Suruchi Kumari.jpg",
     name: "Suruchi Kumari ",
     position: "Coordinator Social",
     fb: "/",
@@ -255,13 +256,16 @@ export const team = [
 
   {
     image: "/images/team/Arun Kumar.jpeg",
-    name: "ARUN KUMAR ",
+    name: "Arun Kumar ",
     position: "Mathematics Coordinator and Faculty",
     fb: "/",
     insta: "/",
     linkdin: "http://linkedin.com/in/arun-kumar-491706356",
   },
 
+  {
+
+  },
   {
     image: "/images/team/Bhuvnesh Suthar.jpg",
     name: "Bhuvnesh Suthar",
@@ -290,7 +294,7 @@ export const team = [
     fb: "/",
     insta: "/",
     linkdin: "https://www.linkedin.com/in/abhishek-singh-844163315/",
-  }
+  },
   {
     image: "/images/team/Tanisha Shukla.jpg",
     name: "Tanisha O. Shukla",

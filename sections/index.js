@@ -131,14 +131,7 @@ export const team = [
     insta: "/",
     linkdin: "/",
   },
-  // {
-  //   image: "/images/user.png",
-  //   name: "",
-  //   position: "Treasurer",
-  //   fb: "/",
-  //   insta: "/",
-  //   linkdin: "/",
-  // },
+ 
 
   {
     image: "/images/team/Uttam Kumar.jpg",
@@ -235,8 +228,33 @@ export const team = [
     insta: "https://www.instagram.com/maddheshiya1417?utm_source=qr&igsh=czhhNzNseno4N3Q2",
     linkdin: "https://www.linkedin.com/in/divya-maddheshiya-a9059b31b?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
   },
+  {
+    image: "/images/team/Bhuvnesh Suthar.jpg",
+    name: "Bhuvnesh Suthar",
+    position: "JEE Maths Faculty ",
+    fb: "/",
+    insta: "https://www.instagram.com/bhuvnesh_2634/",
+    linkdin: "/",
+  },
 
+  
+  {
+    image: "/images/team/Jitesh Hatwal.jpg",
+    name: "Jitesh Hatwal",
+    position: "JEE Maths Faculty ",
+    fb: "/",
+    insta: "/",
+    linkdin: "https://www.linkedin.com/in/jitesh-hatwal-93aa2b319?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+  },
 
+  {
+    image: "/images/team/Abhishek Singh.jpg",
+    name: "Abhishek Singh",
+    position: "JEE Maths Faculty ",
+    fb: "/",
+    insta: "/",
+    linkdin: "https://www.linkedin.com/in/abhishek-singh-844163315/",
+  },
   {
     image: "/images/team/Arun Kumar.jpeg",
     name: "ARUN KUMAR ",
@@ -246,31 +264,6 @@ export const team = [
     linkdin: "http://linkedin.com/in/arun-kumar-491706356",
   },
  
-  {
-    image: "/images/team/Jitesh Hatwal.jpg",
-    name: "Jitesh Hatwal",
-    position: "JEE Maths Faculty ",
-    fb: "/",
-    insta: "/",
-    linkdin: "https://www.linkedin.com/in/jitesh-hatwal-93aa2b319?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
-  },
-  {
-    image: "/images/team/Bhuvnesh Suthar.jpg",
-    name: "Bhuvnesh Suthar",
-    position: "JEE Maths Faculty ",
-    fb: "/",
-    insta: "https://www.instagram.com/bhuvnesh_2634/",
-    linkdin: "/",
-  },
-  {
-    image: "/images/team/Abhishek Singh.jpg",
-    name: "Abhishek Singh",
-    position: "JEE Maths Faculty ",
-    fb: "/",
-    insta: "/",
-    linkdin: "https://www.linkedin.com/in/abhishek-singh-844163315/",
-  },
-  
 ];
 
 

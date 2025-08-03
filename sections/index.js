@@ -116,7 +116,7 @@ export const gallery = [
 
 export const team = [
   {
-    image: "/images/team/Soumyajit Ghosh.jpeg ",
+    image: "/images/team/Soumyajit_Ghosh.jpeg",
     name: "Soumyajit Ghosh",
     position: "President",
     fb: "/",
@@ -308,12 +308,12 @@ export const team = [
 
 
 export const alumni=[
-  {
-    image: "/images/user.png",
-    name: "Dinesh Joshi",
+    {
+    image: "/images/alumni/amit.jpeg",
+    name: "Amit Meel",
     fb: "/",
-    insta: "/",
-    linkdin: "/",
+    insta: "https://www.instagram.com/amitmeel01?igsh=djR0dnc4eTYzbjNm",
+    linkdin: "https://www.linkedin.com/in/amitmeel01",
   },
   {
     image: "/images/user.png",

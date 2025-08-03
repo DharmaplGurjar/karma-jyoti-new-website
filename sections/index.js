@@ -59,6 +59,38 @@ export const navLinks = [
 
 
 export const gallery = [
+
+  {
+    image: "/images/gallery/e11ClothDonate.jpeg",
+    route: "/",
+    date: "3rd August 2025",
+    location:
+    "Clothes donation drive organized at Koranga Basti and Kurmidih Basti by Karma Jyoti.",
+  },
+  {
+    image: "/images/gallery/e10FirstClass.jpeg",
+    route: "/",
+    date: "2nd August 2025",
+    location:
+    "First class session conducted at NLHC (C1, C2, C3), IIT (ISM) Dhanbad.",
+  },
+
+  {
+    image: "/images/gallery/e8ClassOpening.jpeg",
+    route: "https://www.instagram.com/p/DMmvjSQzImV/?igsh=b2F2YnRpZXY2cjFi",
+    date: "26st July 2025",
+    location:
+    "New admissions and orientation program conducted at NLHC (C1, C2, C3), IIT (ISM) Dhanbad.",
+  },
+
+  {
+    image: "/images/gallery/e9SchoolVisit2.jpeg",
+    route: "https://www.instagram.com/p/DLK49MPzMiR/?igsh=MWFvaGtnd2ZxczlzYw==",
+    date: "21st June 2025",
+    location:
+    "Guiding students towards a better future — BSS Girls School, Dhanbad",
+
+  },
   {
     image: "/images/gallery/e0.png",
     route: "https://www.instagram.com/p/C2eu6FuJUPB/?img_index=1",
@@ -111,12 +143,16 @@ export const gallery = [
     location:
     "Karmajyoti girls tied Rakhis to all the children at the orphanage, sharing the beautiful essence of this festival",
      
-  },
+  }
+ 
+
+
+
 ];
 
 export const team = [
   {
-    image: "/images/team/Soumyajit Ghosh.jpeg ",
+    image: "/images/team/Soumyajit_Ghosh.jpeg",
     name: "Soumyajit Ghosh",
     position: "President",
     fb: "/",
@@ -209,6 +245,14 @@ export const team = [
     linkdin: "/",
   },
   {
+    image:"/images/team/PrinceRanjan.jpeg",
+    name: "Prince Ranjan",
+    position: "Coordinator Social",
+    fb: "https://www.facebook.com/prince.ranjan.395",
+    insta: "/",
+    linkdin: "https://www.linkedin.com/in/prince-ranjan-b141809a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
+  },
+  {
     image: "/images/team/Suruchi Kumari.jpg",
     name: "Suruchi Kumari ",
     position: "Coordinator Social",
@@ -253,6 +297,9 @@ export const team = [
     insta: "https://www.instagram.com/maddheshiya1417?utm_source=qr&igsh=czhhNzNseno4N3Q2",
     linkdin: "https://www.linkedin.com/in/divya-maddheshiya-a9059b31b?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
   },
+  {
+
+  },
 
   {
     image: "/images/team/Arun Kumar.jpeg",
@@ -263,9 +310,7 @@ export const team = [
     linkdin: "http://linkedin.com/in/arun-kumar-491706356",
   },
 
-  {
-
-  },
+ 
   {
     image: "/images/team/Bhuvnesh Suthar.jpg",
     name: "Bhuvnesh Suthar",
@@ -308,6 +353,14 @@ export const team = [
 
 
 export const alumni=[
+
+  {
+    image: "/images/alumni/amit.jpeg",
+    name: "Amit Meel",
+    fb: "/",
+    insta: "/",
+    linkdin: "/",
+  },
   {
     image: "/images/user.png",
     name: "Dinesh Joshi",
@@ -315,6 +368,7 @@ export const alumni=[
     insta: "/",
     linkdin: "/",
   },
+  
   {
     image: "/images/user.png",
     name: "Saurav Kumar",

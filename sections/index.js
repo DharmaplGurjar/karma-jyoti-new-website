@@ -353,20 +353,12 @@ export const team = [
 
 
 export const alumni=[
-
-  {
+    {
     image: "/images/alumni/amit.jpeg",
     name: "Amit Meel",
     fb: "/",
-    insta: "/",
-    linkdin: "/",
-  },
-  {
-    image: "/images/user.png",
-    name: "Dinesh Joshi",
-    fb: "/",
-    insta: "/",
-    linkdin: "/",
+    insta: "https://www.instagram.com/amitmeel01?igsh=djR0dnc4eTYzbjNm",
+    linkdin: "https://www.linkedin.com/in/amitmeel01",
   },
   
   {

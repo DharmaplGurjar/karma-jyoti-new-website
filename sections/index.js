@@ -10,6 +10,12 @@ export const navLinks = [
     icon: "/icons/galery.png",
   },
   {
+    label: "Merchandise",
+    route: "/merchandise",
+    icon: "/icons/merchandise.png",
+
+  },
+  {
     label: "Team",
     route: "/team",
     icon: "/icons/team.png",
@@ -59,6 +65,16 @@ export const navLinks = [
 
 
 export const gallery = [
+
+  {
+    image: "/images/gallery/QuizEvent.jpeg",
+    route: "/",
+    date: "15th August 2025",
+    location:
+    "Conducted an Independence Day Quiz Contest at Hindu Mission Orphanage, Hirapur, Dhanbad.",
+
+
+  },
 
   {
     image: "/images/gallery/e11ClothDonate.jpeg",
@@ -297,9 +313,7 @@ export const team = [
     insta: "https://www.instagram.com/maddheshiya1417?utm_source=qr&igsh=czhhNzNseno4N3Q2",
     linkdin: "https://www.linkedin.com/in/divya-maddheshiya-a9059b31b?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
   },
-  {
-
-  },
+  
 
   {
     image: "/images/team/Arun Kumar.jpeg",
@@ -309,7 +323,9 @@ export const team = [
     insta: "/",
     linkdin: "http://linkedin.com/in/arun-kumar-491706356",
   },
+  {
 
+  },
  
   {
     image: "/images/team/Bhuvnesh Suthar.jpg",
@@ -347,7 +363,17 @@ export const team = [
     fb: "/",
     insta: "/",
     linkdin: "https://www.linkedin.com/in/tanisha-shukla-9b59122",
-  }
+  }, 
+
+  {
+    image: "/images/team/image.png",
+    name: "Tribhuwan Singh",
+    position: "JEE Maths Faculty",
+    fb: "/",
+    insta: "https://www.instagram.com/its__virat________?igsh=MTJnaHdpbGJ0MDFiZg==",
+    linkdin: "https://www.linkedin.com/in/tribhuwan-singh-2aa04a304?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+  },
+  
 
 ];
 
